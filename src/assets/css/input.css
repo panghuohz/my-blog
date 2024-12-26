@@ -1,0 +1,36 @@
+/*  引入基础样式和浏览器样式重置 */
+@tailwind base;
+/* 引入常用的 UI 组件样式 */
+@tailwind components;
+/* 引入所有工具类，提供灵活的布局和样式控制 */
+@tailwind utilities;
+
+@layer base {
+  html,
+  :host {
+    font-family: "PingFangSC-Semibold-woff2", "PingFangSC-Medium",
+      "wotfard-medium-webfont.woff2", "wotfard-regular-webfont.woff2",
+      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+  }
+
+  html,
+  body {
+    font-size: 14px;
+    /* scrollbar-color: rgba(255, 255, 255, 0.16) transparent;
+    -webkit-scrollbar-color: rgba(255, 255, 255, 0.16) transparent;
+    scrollbar-width: thin;
+    -webkit-scrollbar-width: thin;
+    box-sizing: border-box;
+    vertical-align: baseline; */
+  }
+
+  :root {
+    --p-surface-950: #090909b;
+    --color-black-20: #252525;
+    --color-black-30: #202020;
+    --color-black-50: #141414;
+    --color-black-65: #0c0c0c;
+    --color-gray-50: #5f5f5f;
+  }
+}
