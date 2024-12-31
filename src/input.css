@@ -17,16 +17,30 @@
   html,
   body {
     font-size: 14px;
-    /* scrollbar-color: rgba(255, 255, 255, 0.16) transparent;
-    -webkit-scrollbar-color: rgba(255, 255, 255, 0.16) transparent;
-    scrollbar-width: thin;
-    -webkit-scrollbar-width: thin;
-    box-sizing: border-box;
-    vertical-align: baseline; */
+    /* Custom scrollbar styles for cross-browser compatibility */
+    /* scrollbar-color: #ffffff #000000; */
+  }
+
+  body::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid #000000;
+  }
+
+  .demo {
+    fill: color-mix(in srgb, #ffffff 100%, transparent);
   }
 
   :root {
-    --p-surface-950: #090909b;
+    --p-surface-950: #090909;
     --color-black-20: #252525;
     --color-black-30: #202020;
     --color-black-50: #141414;

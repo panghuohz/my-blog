@@ -6,6 +6,7 @@ import Tools from '../components/container/Tools.vue';
 import Hero from '../components/container/Hero.vue';
 import OpenSoucre from '../components/container/OpenSoucre.vue';
 import SerivcesGrid from '../components/container/SerivcesGrid.vue';
+import { RouterView } from 'vue-router';
 
 
 
@@ -14,17 +15,15 @@ import SerivcesGrid from '../components/container/SerivcesGrid.vue';
 
 <template>
 
-
-    <!-- 主体 -->
     <Hero />
-    <!-- 服务 -->
+
     <SerivcesGrid />
-    <!-- 框架和工具 -->
+
     <Tools />
-    <!-- 项目 -->
+
     <OpenSoucre />
 
-
+    <RouterView />
 </template>
 
 

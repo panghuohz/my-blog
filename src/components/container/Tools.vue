@@ -30,8 +30,8 @@ function shouldShow(index) {
     if (perRow <= 0) return false; // 避免错误
 
     // 计算每行的起始和结束索引
-    const start = Math.floor((perRow) / 2 - 5); // 居中格子开始
-    console.log(start);
+    const start = Math.floor((perRow) / 2 - 3); // 居中格子开始
+ 
 
     const end = perRow - start - 2; // 居中格子结束
 
@@ -144,7 +144,8 @@ function debounce(callback, wait) {
     --row-offset: 56px;
 }
 
-.frameworks-container:before {
+.frameworks-container:before,
+.frameworks-container::before {
     content: "";
     display: block;
     width: 100%;
@@ -158,7 +159,8 @@ function debounce(callback, wait) {
     pointer-events: none;
 }
 
-.frameworks-container:after {
+.frameworks-container:after,
+.frameworks-container::after {
     content: "";
     display: block;
     width: 100%;

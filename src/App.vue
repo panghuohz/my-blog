@@ -6,8 +6,7 @@ const route = useRoute();
 </script>
 
 <template>
-  <div class="main flex flex-col min-h-[100vh] relative bg-dark text-white">
-    {{ route.meta.hideLaout }}
+  <div class="main flex flex-col min-h-[100vh] relative dark:bg-dark bg-white"> 
     <LayoutHeader v-if="!route.meta.hideLaout" />
     <RouterView />
     <LayoutFooter v-if="!route.meta.hideLaout" />

@@ -26,21 +26,26 @@
             <div class="relative w-full max-w-[1200px] mx-auto">
                 <img class="icon-heart" src="../../assets/img/heart.svg" alt="" width="58" height="55">
                 <div class="flex justify-center">
-                    <span class="md:text-[3rem] text-[2.2rem]">My project</span>
+                    <span class="md:text-[3rem] text-[2.2rem] text-white">Open Project</span>
                 </div>
-                <div class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3  mt-7 w-full px-[20px] mx-auto">
-                    <div v-for="i in 9"
-                        class="bg-[#26262640] flex justify-center items-center h-[184px] transition-transform duration-200 ease-in-out rounded-2xl border border-[#262626b3]"
-                        style="">
-                        <img class="max-h-24 max-w-48" src="../assets/img/idea.svg" alt="idea">
+                <!-- <div class="w-full grid gap-5" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+                    <a href="" v-for="i in 6">
+                        <div class="rounded-xl">
+                            <div class="relative">
+                                <div class="absolute w-[1px] h-full z-10 bg-[#272727] left-[2rem] top-0"></div>
+                                <div class="absolute w-[1px] h-full z-10 bg-[#272727] right-[2rem] top-0"></div>
+                                <div class="absolute w-[1px] h-full z-10 bg-[#272727] top-[2rem] left-0"></div>
+                                <div class="absolute w-[1px] h-full z-10 bg-[#272727] bottom-[2rem] lef"></div>
+                                <div class="w-[300px] h-[219px]">
+                                    <div>
 
-                    </div>
-                    <!-- <a href="">
-                        <div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
-                    </a> -->
-                </div>
+                    </a>
+                </div> -->
             </div>
         </div>
     </section>
