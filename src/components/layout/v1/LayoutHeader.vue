@@ -15,7 +15,7 @@ import { RouterLink } from 'vue-router';
             <RouterLink to="/"
                 class=" inline-flex items-center justify-center md:text-[1.6rem] text-[1.2rem] font-bold ">
                 <span class="mr-[8px]">
-                    <img src="../../assets/img/docusaurus.svg" alt="" class="w-[33px] h-[33px]">
+                    <img src="@/assets/img/docusaurus.svg" alt="" class="w-[33px] h-[33px]">
                 </span>
                 <span>A</span>
                 <span>MENG</span>

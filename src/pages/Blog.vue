@@ -10,9 +10,7 @@
     <section class="w-full my-10 dark:text-white text-slate-950">
         <div class="grid-container container mx-auto px-6">
             <div class="">
-                <div>
-                    <h1 class="text-[2rem] mb-5">最新文章</h1>
-                </div>
+                <h1 class="text-[2rem] mb-5">最新文章</h1>
                 <div class="grid-item">
                     <div style="grid-area: newest;">
                         <ul class="flex flex-col gap-12">
@@ -47,22 +45,19 @@
                         </ul>
                     </div>
                     <div style="grid-area: categories;">
-                        <div>
-                            <span>文章标签</span>
-                        </div>
-                        <div>
-                            <span>Java</span>
-                            <span>Docker</span>
-                            <span>CSS</span>
-                            <span>HTML</span>
-                        </div>
+                        <h3 class="mb-8">文章标签</h3>
+                        <ul class="flex gap-3 dark:text-[#09090b]">
+                            <li class="px-2 py-1 bg-[#fafafa] rounded-md ">Java</li>
+                            <li class="px-2 py-1 bg-[#fafafa] rounded-md ">Vue</li>
+                            <li class="px-2 py-1 bg-[#fafafa] rounded-md ">Spring</li>
+                            <li class="px-2 py-1 bg-[#fafafa] rounded-md ">Nuxt</li>
+                        </ul>
                     </div>
                     <div style="grid-area: popular;">
                         <div><span>热门文章</span></div>
                         <div>AMENG重磅上线</div>
                     </div>
                 </div>
-
                 <!-- <button class="w-[250px] bg-gray-300 mx-auto flex justify-center rounded-xl">
                     <span></span>
                 </button> -->
