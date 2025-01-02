@@ -1,0 +1,67 @@
+
+ 
+## 这是我测试的markdown文件
+> Dorothy followed her through many of the beautiful rooms in her castle.
+
+> #### The quarterly results look great!
+>
+> - Revenue was off the chart.
+> - Profits were higher than ever.
+>
+>  *Everything* is going according to **plan**.
+
+---
+
+- First item
+- Second item
+- Third item
+- Fourth item
+
+***
+这是一个链接 [Markdown语法](https://markdown.com.cn "最好的markdown教程")。
+
+[![沙漠中的岩石图片](https://markdown.com.cn/assets/img/philly-magic-garden.9c0b4415.jpg "Shiprock")](https://markdown.com.cn)
+
+通过 PrismJS，高亮代码块时，您需要确保这些代码块被正确的标记为特定语言。
+例如，`javascript`、`html`、`css` 等。通过 PrismJS，高亮代码块时，
+您需要确保这些代码块被正确的标记为特定语言。
+例如，`javascript`、`html`、`css` 等。通过 PrismJS，高亮代码块时，您需要确保这些代码块被正确的标记为特定语言。
+例如，`javascript`、`html`、`css` 等。
+
+PrismJS 💻会自动识别这些语言标记，并应用对应的语法高亮。
+
+### **4. 配置自动高亮**
+在 MDX 渲染过程中，确保每个代码块都能应用 PrismJS 高亮。您可以在 `vite.config.js` 中做一些配置，使得 MDX 内容中的代码块自动被识别和高亮：
+
+ 
+
+```javascript
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import mdx from '@mdx-js/rollup'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import prismjs from 'prismjs'
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    vueJsx(),
+    mdx({
+      rehypePlugins: [
+        // 将代码块转换为支持 PrismJS 高亮的 HTML
+        require('rehype-prism')
+      ]
+    })
+  ],
+  resolve: {
+    extensions: ['.js', '.ts', '.vue', '.mdx'],
+  }
+})
+```
+
+
+<script setup>
+    
+</script>
+
+ 

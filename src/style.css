@@ -35,10 +35,6 @@
     border: 3px solid #000000;
   }
 
-  .demo {
-    fill: color-mix(in srgb, #ffffff 100%, transparent);
-  }
-
   :root {
     --p-surface-950: #090909;
     --color-black-20: #252525;

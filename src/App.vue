@@ -1,6 +1,6 @@
 <script setup>
-import LayoutHeader from './components/layout/v1/LayoutHeader.vue';
-import LayoutFooter from './components/layout/v1/LayoutFooter.vue';
+import LayoutHeader from '@/components/layout/v1/LayoutHeader.vue';
+import LayoutFooter from '@/components/layout/v1/LayoutFooter.vue';
 import { useRoute } from 'vue-router';
 const route = useRoute();
 </script>

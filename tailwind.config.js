@@ -175,9 +175,6 @@ export default {
       xl: ['24px', '32px'],
       article: ['1.125rem', '1.875rem'],
     },
-    fontFamily: {
-
-    },
     screens: { //屏幕配置
       'sm': '640px',
       'md': '768px',
@@ -185,7 +182,74 @@ export default {
       'xl': '1280px',
       '2xl': '1536px',
     },
-    extend: {
+    // typography: { //typography配置
+    //   css: {
+    //     color: "#fff",
+    //   },
+    // },
+    extend: { //扩展配置
+      typography: { //typography扩展配置
+        DEFAULT: {
+          css: {
+            maxWindth: '69ch',
+            color: '#ffffff',
+            blockquote: {
+              color: '#ffffff',
+            },
+            h1: {
+              fontSize: '2.875rem',
+              fontWeight: '700',
+              color: '#ffff',
+            },
+            h2: {
+              fontSize: '2.25rem',
+              fontWeight: '700',
+              color: '#ffff',
+            },
+            h3: {
+              fontSize: '1.7rem',
+              fontWeight: '700',
+              color: '#ffff',
+            },
+            h4: {
+              fontSize: '1.5rem',
+              fontWeight: '700',
+              color: '#ffff',
+            },
+            h5: {
+              fontSize: '1.325rem',
+              fontWeight: '700',
+              color: '#ffff',
+            },
+            h6: {
+              fontSize: '1.125rem',
+              fontWeight: '700',
+              color: '#ffff',
+            },
+            code: {
+              color: '#ffff',
+            },
+            pre: {
+              backgroundColor: 'transparent',
+            },
+            p: {
+              fontSize: '1.125rem',
+              lineHeight: '1.8',
+              letterSpacing: '0.02em',
+              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+            },
+            a: {
+              color: '#ffffff',
+              textDecoration: 'none',
+              boxShadow: '0 1.5px 0 hsl(225deg 100% 75%)',
+              '&:hover': {
+                textDecoration: 'none',
+                boxShadow: 'none',
+              }
+            }
+          },
+        },
+      },
       spacing: { //配置间距
         '8xl': '96rem',
         '9xl': '128rem',
@@ -196,18 +260,15 @@ export default {
         '3xl': '3rem',
         '4xl': '4rem',
       },
-      colors: { //配置扩展颜色
-
-      },
       gridTemplateColumns: { //配置网格布局
         // like this: grid-cols-services-xl
         'services-xl': 'repeat(auto-fill, minmax(280px, 1fr))',
         'services-2xl': 'repeat(auto-fill, minmax(360px, 1fr))',
       },
-      animation: {
+      animation: { //配置动画
         'spin-slow': 'spin 3s linear infinite',
       },
-      keyframes: {
+      keyframes: {  //配置关键帧
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
@@ -215,6 +276,8 @@ export default {
       }
     }
   },
-  plugins: [],
+  plugins: [ //插件配置
+    require('@tailwindcss/typography'), //引入typography插件
+  ],
 }
 
