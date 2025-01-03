@@ -1,21 +1,26 @@
-<script setup>
-import CodeBlock from '../components/CodeBlock.vue';
+import CodeBlock from '@/components/CodeBlock.vue';
    
-</script>
-# 这是一个 MDX 文件示例
+
+---
+title: Hello!
+---
+
+## 这是一个 MDX 文件示例 测试
 
 这是一段普通的 Markdown 内容，下面是一个代码块：
-```javascript
+```javascript {line-numbers}
 const accordingToPlan = true;
 const accordingToPlan = true;
 console.log('Plan:', accordingToPlan);
 ```
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/github-dark.min.css">
+```
+ vue 代码块 什么是正确的呢？
  
-
- 
-# 示例代码块
- 
-<CodeBlock language="javascript" highlightLines="2,4-5">
+## 示例代码块
+<CodeBlock language="javascript" highlightLines="1">
+  const accordingToPlan = true;
   const accordingToPlan = true;
   console.log('Plan:', accordingToPlan);
 </CodeBlock>

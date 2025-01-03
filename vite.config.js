@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import mdx from '@mdx-js/rollup'
+import rehypeHighlight from 'rehype-highlight'
 // import vueJsx from '@vitejs/plugin-vue-jsx'
 // import remarkToc from 'remark-toc'
-import rehypePrism from 'rehype-prism'
+
 import path from 'path';
 
 // https://vite.dev/config/
@@ -15,7 +16,7 @@ export default defineConfig({
       jsxImportSource: 'vue',  // 使用 Vue 作为 JSX 源
       // jsx: true,
       // remarkPlugins: [remarkToc], // 使用 remark-toc 自动生成目录
-      rehypePlugins: [rehypePrism] // 配置 Prism.js 插件
+      rehypePlugins: [rehypeHighlight] // 配置 Prism.js 插件
     })
   ],
   resolve: {

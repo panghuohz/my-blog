@@ -228,9 +228,12 @@ export default {
             },
             code: {
               color: '#ffff',
+              fontSize: '1rem',
+              scrollbarColor: '#ffffff #464646',
             },
             pre: {
               backgroundColor: 'transparent',
+              padding: '0px',
             },
             p: {
               fontSize: '1.125rem',

@@ -1,6 +1,5 @@
 <script setup>
 import { onMounted, ref, useSlots, nextTick } from 'vue';
-import Prism from 'prismjs';
 
 const props = defineProps({
     language: String,
@@ -10,20 +9,27 @@ const props = defineProps({
 const codeContent = ref(''); // 用来存储代码内容
 // 使用 `defineSlots` 来接收插槽内容
 const slots = useSlots();
+
+
+
 onMounted(() => {
     // 执行 Prism 高亮
     Prism.highlightAll();
-    nextTick(() => {
-        // 从插槽中提取代码内容
-        const slotContent = slots.default && slots.default()[0];
-        if (slotContent) {
-            codeContent.value = slotContent.children; // 获取插槽的内容
-        }
 
+    // 设置代码内容
+    const codeElement = document.querySelector('pre code');
+    if (codeElement) {
+        codeContent.value = codeElement.innerText;
+    }
+    // nextTick(() => {
+    //     // 从插槽中提取代码内容
+    //     const slotContent = slots.default && slots.default()[0];
+    //     console.log(slotContent);
 
-    });
-
-
+    //     if (slotContent) {
+    //         codeContent.value = slotContent.children; // 获取插槽的内容
+    //     }
+    // });
 });
 
 function copyToClipboard(code) {
@@ -37,7 +43,7 @@ function copyToClipboard(code) {
 <template>
     <!-- <button class="copy-btn" @click="copyToClipboard(codeContent)">复制</button> -->
     <div>
-        <pre :data-line="highlightLines" :class="`language-${language}`"><code>{{ codeContent }}</code></pre>
+        <pre :data-line="highlightLines"><code :class="`hljs language-javascript`">`{const java='123'}`</code></pre>
     </div>
 
 </template>
