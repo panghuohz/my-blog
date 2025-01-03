@@ -1,8 +1,22 @@
+<script setup>
+import CodeBlock from '../components/CodeBlock.vue';
+   
+</script>
 # 这是一个 MDX 文件示例
 
 这是一段普通的 Markdown 内容，下面是一个代码块：
-
 ```javascript
-const add = (a, b) => a + b;
-console.log(add(3, 5));
+const accordingToPlan = true;
+const accordingToPlan = true;
+console.log('Plan:', accordingToPlan);
 ```
+ 
+
+ 
+# 示例代码块
+ 
+<CodeBlock language="javascript" highlightLines="2,4-5">
+  const accordingToPlan = true;
+  console.log('Plan:', accordingToPlan);
+</CodeBlock>
+ 
