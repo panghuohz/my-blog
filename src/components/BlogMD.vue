@@ -1,7 +1,6 @@
 <script setup>
 import { defineAsyncComponent } from 'vue';
-// //异步加载组件
-const MDXContent = defineAsyncComponent(() => import('@/posts/demo.mdx'))
+const MDXContent = defineAsyncComponent(() => import('@/posts/demo.mdx')) //异步加载组件
 
 </script>
 

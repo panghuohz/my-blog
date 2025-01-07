@@ -8,7 +8,7 @@
 
 <template>
     <section class="w-full my-10 dark:text-white text-slate-950">
-        <div class="grid-container container mx-auto px-6">
+        <div class="grid-container max-w-screen-xl container mx-auto px-6">
             <div class="">
                 <h1 class="text-[2rem] mb-5">最新文章</h1>
                 <div class="grid-item">

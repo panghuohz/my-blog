@@ -5,9 +5,10 @@ import mdx from '@mdx-js/rollup'
 import rehypeHighlight from 'rehype-highlight'
 import rehypeHighlightLineNumbers from 'rehype-highlight-code-lines'
 import rehypeMdxCodeProps from 'rehype-mdx-code-props'
+ 
 // import vueJsx from '@vitejs/plugin-vue-jsx'
 // import remarkToc from 'remark-toc'
- 
+
 
 export default defineConfig({
   plugins: [
@@ -24,9 +25,18 @@ export default defineConfig({
             lineContainerTagName: 'span'
           }
         ],
-        rehypeMdxCodeProps
+        [rehypeMdxCodeProps,
+          {
+            elementAttributeNameCase: 'html',
+            tagName: 'pre'
+          }
+        ]
       ]
     }),
+    // babel({
+    //   extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.mdx'], // babel需要处理的文件类型
+    //   presets: ['@vue/babel-preset-jsx'], // 处理 Vue 的 JSX 语法
+    // }),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.cjs', '.mjs', '.md', '.mdx'],

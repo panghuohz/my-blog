@@ -229,17 +229,20 @@ export default {
             hr: {
               borderColor: '#ffffff',
             },
+            pre: {
+              backgroundColor: '#18181b !important',
+              padding: '0px',
+              margin: '0px',
+              fontSize: '1rem',
+            },
             code: {
               color: '#ffff',
               fontSize: '1rem',
+              backgroundColor: '#18181b !important',
               scrollbarColor: '#ffffff #464646',
             },
             blockquote: {
               borderInlineStartColor: '#8957e5',
-            },
-            pre: {
-              backgroundColor: 'transparent',
-              padding: '0px',
             },
             p: {
               fontSize: '1.125rem',

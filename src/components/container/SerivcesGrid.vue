@@ -59,7 +59,7 @@ onBeforeUnmount(() => {
                             <div
                                 class="flex items-center justify-center w-14 aspect-square bg-[--color-black-50] border border-[--color-black-20] rounded-lg xl:mb-5 mb-0">
                                 <svg class="fill-[--color-gray-50] w-[55%]" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24" role="img" aria-label="Statistics Icon">
+                                    viewBox="0 0 24 24" role="img">
                                     <path
                                         d="M13,0h-2c-1.1,0-2,.9-2,2V24h6V2c0-1.1-.9-2-2-2Zm0,22h-2V2h2V22ZM22,6h-2c-1.1,0-2,.9-2,2V24h6V8c0-1.1-.9-2-2-2Zm0,16h-2V8h2v14ZM4,12H2c-1.1,0-2,.9-2,2v10H6V14c0-1.1-.9-2-2-2Zm0,10H2V14h2v8Z">
                                     </path>

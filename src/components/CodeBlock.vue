@@ -1,84 +1,47 @@
 <script setup>
-import { onMounted, ref, useSlots, nextTick } from 'vue';
-
 const props = defineProps({
     language: String,
-    highlightLines: String, // 用于传递行高亮的范围，如 "2,4-5"
+    highlightLines: String,
 });
 
-const codeContent = ref(''); // 用来存储代码内容
-// 使用 `defineSlots` 来接收插槽内容
-const slots = useSlots();
-
-
-
-onMounted(() => {    
-
-    // 设置代码内容
-    const codeElement = document.querySelector('pre code');
-    if (codeElement) {
-        codeContent.value = codeElement.innerText;
-    }
-    // nextTick(() => {
-    //     // 从插槽中提取代码内容
-    //     const slotContent = slots.default && slots.default()[0];
-    //     console.log(slotContent);
-
-    //     if (slotContent) {
-    //         codeContent.value = slotContent.children; // 获取插槽的内容
-    //     }
-    // });
-});
-
-function copyToClipboard(code) {
-    navigator.clipboard.writeText(code).then(
-        () => alert('代码已复制到剪贴板！'),
-        () => alert('复制失败，请手动复制。')
-    );
-}
 </script>
 
 <template>
-    <!-- <button class="copy-btn" @click="copyToClipboard(codeContent)">复制</button> -->
-    <div>
-        <pre :data-line="highlightLines"><code :class="`hljs language-javascript`">`{const java='123'}`</code></pre>
+    <div class="flex bg-[#18181b] rounded-md justify-between mb-5">
+        <slot />
+        <div>
+            <button class="btn m-[8px] flex w-6 h-6 justify-center items-center">
+                <svg height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                    data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+                    <path
+                        d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                    </path>
+                    <path
+                        d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                    </path>
+                </svg>
+                <svg height="16" viewBox="0 0 16 16" version="1.1" width="16"
+                    data-view-component="true"
+                    class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                    <path
+                        d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+                    </path>
+                </svg>
+            </button>
+        </div>
     </div>
-
 </template>
 
 <style scoped>
-.code-block {
-    position: relative;
-    margin-bottom: 1em;
+.btn .octicon {
+    color: #9198a1;
+    vertical-align: text-bottom;
 }
 
-.code-block .copy-btn:hover {
-    opacity: 1;
-}
-
-.copy-btn {
-    position: -webkit-sticky;
-    position: sticky;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    top: calc((5rem, 0px) + 8rem);
-    transform: translateX(calc(8px* -1));
-    margin-block: 8px;
-    margin-left: auto;
-    margin-right: 0;
-    border: 1px solid;
-    color: hsl(210deg 20% 77%);
-    border-radius: 5px;
-    opacity: 0;
-    transition: opacity .25s;
-    transition-delay: 1s;
-}
-
-.copy-btn:hover {
-    background-color: #0056b3;
+.octicon {
+    display: inline-block;
+    overflow: visible !important;
+    vertical-align: text-bottom;
+    fill: currentColor;
 }
 </style>

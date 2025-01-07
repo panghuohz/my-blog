@@ -1,18 +1,70 @@
 import CodeBlock from '@/components/CodeBlock.vue';
-   
+export const name = 'World'
+export const title = 'Hi, ' + name + '!'
+
+
 ## 这是一个 MDX 文件示例 测试
 
+## {title}
 这是一段普通的 **Markdown** 内容，下面是一个代码块：
-```javascript filename="index.js"
-const accordingToPlan = true;
-const accordingToPlan = true;
-console.log('Plan:', accordingToPlan);
-```
+<CodeBlock title="my-script.js" copy>
+```js title="index.js" copy
+import { read } from "to-vfile";
+import remark from "remark";
+import gfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypeHighlight from "rehype-highlight";
+import rehypeHighlightLines from "rehype-highlight-code-lines";
+import rehypeStringify from "rehype-stringify";
 
+main();
+
+async function main() {
+  const file = await remark()
+    .use(gfm)
+    .use(remarkRehype)
+    .use(rehypeHighlight)
+    .use(rehypeHighlightLines)
+    .use(rehypeStringify)
+    .process(await read("example.md"));
+
+  console.log(String(file));
+}
+```
+</CodeBlock>
+
+<CodeBlock title="my-script.js">
 ```diff
 - console.log('hello world');
++ async function main() {
++  const file = await remark()
++    .use(gfm)
++    .use(remarkRehype)
++    .use(rehypeHighlight)
++    .use(rehypeHighlightLines)
++    .use(rehypeStringify)
++    .process(await read("example.md"));
++ }
 + console.log('hello mdx');
 ```
+</CodeBlock>
+
+<CodeBlock title="my-script.js">
+```js
+const message = 'Hello, MDX with copy!';
+console.log(message);
+```
+</CodeBlock>
+
+<CodeBlock title="my-script.js">
+```java
+public void main(){
+  int a = 123;
+  System.out.print("hello word!")
+}
+```
+</CodeBlock>
+ 
 
 > [!IMPORTANT]
 > If the code highlighter already provides numbering and highlighting code lines, don't use `rehype-highlight-code-lines`!
