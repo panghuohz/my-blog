@@ -226,10 +226,16 @@ export default {
               fontWeight: '700',
               color: '#ffff',
             },
+            hr: {
+              borderColor: '#ffffff',
+            },
             code: {
               color: '#ffff',
               fontSize: '1rem',
               scrollbarColor: '#ffffff #464646',
+            },
+            blockquote: {
+              borderInlineStartColor: '#8957e5',
             },
             pre: {
               backgroundColor: 'transparent',

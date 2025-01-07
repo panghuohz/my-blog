@@ -1,12 +1,9 @@
 <!-- 首页 -->
 <script setup>
-
-
 import Tools from '../components/container/Tools.vue';
 import Hero from '../components/container/Hero.vue';
 import OpenSoucre from '../components/container/OpenSoucre.vue';
 import SerivcesGrid from '../components/container/SerivcesGrid.vue';
-import { RouterView } from 'vue-router';
 
 
 
@@ -14,7 +11,6 @@ import { RouterView } from 'vue-router';
 
 
 <template>
-
     <Hero />
 
     <SerivcesGrid />
@@ -22,8 +18,6 @@ import { RouterView } from 'vue-router';
     <Tools />
 
     <OpenSoucre />
-
-    <RouterView />
 </template>
 
 

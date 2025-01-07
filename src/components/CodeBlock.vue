@@ -12,9 +12,7 @@ const slots = useSlots();
 
 
 
-onMounted(() => {
-    // 执行 Prism 高亮
-    Prism.highlightAll();
+onMounted(() => {    
 
     // 设置代码内容
     const codeElement = document.querySelector('pre code');

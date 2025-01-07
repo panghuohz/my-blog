@@ -46,11 +46,11 @@ import { RouterLink } from 'vue-router';
                                 exact-active-class="active-link">更新
                             </RouterLink>
                         </li>
-                        <li>
+                        <!-- <li>
                             <RouterLink class="px-4 py-3 cursor-pointer transition-all" to="/about"
                                 exact-active-class="active-link">关于我
                             </RouterLink>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
             </div>
