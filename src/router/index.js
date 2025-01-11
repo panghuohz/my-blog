@@ -6,6 +6,12 @@ const routes = [
     { path: "/blog", component: () => import("@/pages/Blog.vue"), meta: {} },
     { path: "/changlog", component: () => import("@/pages/ChangLog.vue"), meta: {} },
     { path: "/demo", component: () => import("@/components/BlogMD.vue"), meta: {} },
+    {
+        path: '/post/:slug',
+        component: () => import('@/components/BlogMD.vue'),
+        name: 'Post',
+        props: route => ({ slug: route.params.slug })
+    },
     // 捕获所有未匹配的路径
     { path: "/:pathMatch(.*)*", component: () => import("@/pages/NotFound.vue"), meta: { title: "404", hideLaout: true } },
 ];

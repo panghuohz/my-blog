@@ -1,14 +1,14 @@
-import CodeBlock from '@/components/CodeBlock.vue';
-export const name = 'World'
-export const title = 'Hi, ' + name + '!'
-
-
-## 这是一个 MDX 文件示例 测试
+export const title = "这是我的一个MDX项目";
+export const intro = "关于我是如何使用vite构建的vue项目，搭建这个博客的";
 
 ## {title}
+
+面对森林火灾，普通群众应如何确保自身安全？1 月 10 日，潇湘晨报记者采访了消防专业人士，
+国家消防救援局湖南机动队伍筹备组干部俞东卫介绍，主要在以下几个方面，{intro}
+
 这是一段普通的 **Markdown** 内容，下面是一个代码块：
-<CodeBlock language="my-script.js">
-```js
+
+```js showLineNumbers title="index.js"
 import { read } from "to-vfile";
 import remark from "remark";
 import gfm from "remark-gfm";
@@ -27,13 +27,16 @@ async function main() {
     .use(rehypeHighlightLines)
     .use(rehypeStringify)
     .process(await read("example.md"));
+}
+console.log(String(file));
+```
 
-  console.log(String(file));
+```java
+public void main(){
+    String name = 'zhangsan';
 }
 ```
-</CodeBlock>
 
-<CodeBlock title="my-script.js">
 ```diff
 - console.log('hello world');
 + async function main() {
@@ -47,32 +50,9 @@ async function main() {
 + }
 + console.log('hello mdx');
 ```
-</CodeBlock>
-
-<CodeBlock title="my-script.js">
-```js
-const message = 'Hello, MDX with copy!';
-console.log(message);
-```
-</CodeBlock>
-
-<CodeBlock title="my-script.js">
-```java
-public void main(){
-  int a = 123;
-  System.out.print("hello word!")
-}
-```
-</CodeBlock>
- 
 
 > [!IMPORTANT]
 > If the code highlighter already provides numbering and highlighting code lines, don't use `rehype-highlight-code-lines`!
-> \
-> \
+>
 > You can use `rehype-highlight-code-lines` even without a code highlighter.
 
-
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/github-dark.min.css">
-```
